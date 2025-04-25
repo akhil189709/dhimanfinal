@@ -10,76 +10,54 @@ const Contact = () => {
     }, []);
 
     return (
-        <div>
+        <div className="bg-white text-black">
             {/* Hero Section */}
-            <section className="relative min-h-screen w-full flex items-center justify-center overflow-hidden">
-                <div className="absolute inset-0 z-0 ">
+            <section className="relative min-h-[60vh] sm:min-h-[75vh] lg:min-h-screen w-full flex items-center justify-center overflow-hidden">
+                <div className="absolute inset-0 z-0">
                     <img
                         src="/interior-designer-presenting-renovation-project.jpg"
                         alt="Office interior"
                         className="w-full h-full object-cover"
                     />
                 </div>
-                <div className="container mx-auto px-4 relative z-10 text-center">
-                    {/* <motion.h1
-                        initial={{ opacity: 0, y: 30 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        transition={{ duration: 0.8 }}
-                        className="text-4xl md:text-6xl font-bold text-white mb-6"
-                    >
-                        Contact <span className="text-[#CEA959]">Us</span>
-                    </motion.h1> */}
-                    {/* <motion.p
-                        initial={{ opacity: 0, y: 30 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        transition={{ duration: 0.8, delay: 0.2 }}
-                        className="text-xl md:text-2xl text-slate-300 max-w-3xl mx-auto"
-                    >
-                        Get in touch with our team for inquiries, partnerships, and project consultations
-                    </motion.p> */}
-                </div>
+                <div className="container mx-auto px-4 relative z-10 text-center"></div>
             </section>
 
             {/* Contact Info & Form Section */}
-            <section className="py-20 bg-white">
-                <div className="max-w-7xl mx-auto px-4">
-
+            <section className="py-16 sm:py-20 bg-white">
+                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     {/* Info Cards */}
                     <motion.div
                         initial={{ opacity: 0, y: 50 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
                         transition={{ duration: 0.6, ease: 'easeOut' }}
-                        className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-20"
+                        className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 mb-16"
                     >
-                        {[
-                            {
-                                title: <p className='font-serif font-normal'>Talk to Us</p>,
-                                desc: 'We’re just a call away, always ready to help you',
-                                icon: <Phone className="text-black" size={24} />,
-                                content: <span className="text-base">+91 99994 57050</span>
-                            },
-                            {
-                                title: <p className='font-serif font-medium'>Drop Us a Mail</p>,
-                                desc: 'Reach out anytime, we usually reply within a few hours.',
-                                icon: <Mail className="text-black" size={24} />,
-                                content: <span className="text-base">akshay@dhimandevelopers.com</span>
-                            },
-                            {
-                                title: <p className='font-serif font-medium'>Visit Us</p>,
-                                desc: 'Come say hello at our office or find us on the map.',
-                                icon: <MapPin className="text-black mt-3" size={24} />,
-                                content: (
-                                    <span className="text-base">
-                                        505, 5th Floor, Emaar The Palm Square<br />
-                                        Sector 66, Gurugram-122102
-                                    </span>
-                                )
-                            }
-                        ].map((item, index) => (
+                        {[{
+                            title: <p className='font-serif font-normal'>Talk to Us</p>,
+                            desc: 'We’re just a call away, always ready to help you',
+                            icon: <Phone className="text-black" size={24} />,
+                            content: <span className="text-base">+91 99994 57050</span>
+                        }, {
+                            title: <p className='font-serif font-medium'>Drop Us a Mail</p>,
+                            desc: 'Reach out anytime, we usually reply within a few hours.',
+                            icon: <Mail className="text-black" size={24} />,
+                            content: <span className="text-base">akshay@dhimandevelopers.com</span>
+                        }, {
+                            title: <p className='font-serif font-medium'>Visit Us</p>,
+                            desc: 'Come say hello at our office or find us on the map.',
+                            icon: <MapPin className="text-black mt-3" size={24} />,
+                            content: (
+                                <span className="text-base">
+                                    505, 5th Floor, Emaar The Palm Square<br />
+                                    Sector 66, Gurugram-122102
+                                </span>
+                            )
+                        }].map((item, index) => (
                             <div
                                 key={index}
-                                className="p-8 bg-white rounded-lg border border-[#D6D6D6] space-y-4 hover:shadow-2xl transition-all duration-300 h-full"
+                                className="p-6 sm:p-8 bg-white rounded-lg border border-[#D6D6D6] space-y-4 hover:shadow-2xl transition-all duration-300 h-full"
                             >
                                 <h4 className="text-xl font-semibold text-slate-900">{item.title}</h4>
                                 <p className="text-slate-500 text-sm">{item.desc}</p>
@@ -91,7 +69,7 @@ const Contact = () => {
                         ))}
                     </motion.div>
 
-                    {/* Form Block */}
+                    {/* Contact Form */}
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-start">
                         <motion.div
                             initial={{ opacity: 0, x: -40 }}
@@ -99,8 +77,8 @@ const Contact = () => {
                             viewport={{ once: true }}
                             transition={{ duration: 0.6 }}
                         >
-                            <h2 className="text-4xl font-serif text-black mb-4 pl-15" >Let's <br />Get in touch</h2>
-                            <p className="text-gray-700 text-lg pl-14">
+                            <h2 className="text-3xl sm:text-4xl font-serif text-black mb-4">Let's <br />Get in touch</h2>
+                            <p className="text-gray-700 text-base sm:text-lg">
                                 Let’s bring your vision to life.<br />
                                 Your satisfaction means the world to us.
                             </p>
@@ -135,7 +113,7 @@ const Contact = () => {
                             ></textarea>
                             <button
                                 type="submit"
-                                className="bg-slate-800 text-white px-6 py-3 rounded hover:bg-[#004C4C] transition-colors"
+                                className="bg-slate-800 text-white px-6 py-3 rounded hover:bg-[#004C4C] transition-colors w-full sm:w-auto"
                             >
                                 Submit
                             </button>
@@ -145,8 +123,8 @@ const Contact = () => {
             </section>
 
             {/* Map Section */}
-            <section className="py-20 bg-white">
-                <div className="container mx-auto px-4">
+            <section className="py-16 bg-white">
+                <div className="max-w-6xl mx-auto px-4 sm:px-6">
                     <SectionTitle
                         className="font-serif"
                         title="Our Location"
@@ -167,7 +145,7 @@ const Contact = () => {
                             allowFullScreen
                             loading="lazy"
                             referrerPolicy="no-referrer-when-downgrade"
-                            className="rounded-2xl shadow-lg"
+                            className="rounded-2xl shadow-lg w-full"
                         ></iframe>
                     </motion.div>
                 </div>

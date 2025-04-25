@@ -26,19 +26,22 @@ const Building = () => {
         <motion.div
             ref={ref}
             style={{ clipPath, width }}
-            className="mx-auto h-[130vh] flex items-center justify-center text-center overflow-hidden bg-[#F2EBE1]/90 rounded-t-[2.5rem]"
+            className="mx-auto min-h-screen flex items-center justify-center text-center overflow-hidden bg-[#F2EBE1]/90 rounded-t-[2.5rem] px-4"
         >
+            {/* Heading */}
             <motion.h2
-                className="absolute  z-0 text-[10vw] font-serif font-bold text-slate-800 leading-tight"
+                className="absolute z-0 mb-60 font-serif font-bold text-slate-800 leading-tight text-[14vw] md:text-[10vw] lg:text-[8vw]"
                 style={{ opacity: scrollYProgress }}
             >
                 DEVELOPING<br />NEW<br />HORIZONS
             </motion.h2>
 
+
+            {/* Building Image */}
             <motion.img
                 src="https://dhiman.thedmsolutions.in/wp-content/uploads/2025/03/freepik__adjust__31526.png"
                 alt="Building Centered"
-                className="relative mt-56 z-7 w-auto max-w-[180px] md:max-w-[260px] lg:max-w-[340px] object-contain"
+                className="relative mt-44 z-10 w-auto max-w-[160px] sm:max-w-[200px] md:max-w-[260px] lg:max-w-[320px] object-contain"
                 style={{ scale, y: translateY }}
             />
         </motion.div>

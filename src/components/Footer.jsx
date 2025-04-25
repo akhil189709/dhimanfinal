@@ -22,33 +22,33 @@ const Footer = ({ isTransparent = false }) => {
 
     return (
         <footer
-            className={`w-full text-white overflow-hidden ${isTransparent
-                    ? 'bg-black/30 backdrop-blur-sm'
-                    : 'bg-gradient-to-b from-[#47545F] to-[#1F2F3C]'
+            className={`w-full text-white font-serif ${isTransparent
+                ? 'bg-black/30 backdrop-blur-sm'
+                : 'bg-gradient-to-b from-[#47545F] to-[#1F2F3C]'
                 }`}
         >
-            <div className="w-full px-7 py-16 overflow-hidden">
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 w-full">
+            <div className="w-full px-4 sm:px-6 md:px-10 py-12 md:py-16">
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10">
                     {/* Company Info */}
                     <div>
                         <div className="flex items-center gap-2 mb-6">
                             <img
                                 src="https://dhiman.thedmsolutions.in/wp-content/uploads/2025/03/Dhiman-Final-Logo.png"
                                 alt="Dhiman Developers Logo"
-                                className="h-10 w-auto"
+                                className="h-8 sm:h-10 w-auto"
                             />
                         </div>
-                        <p className="text-slate-300 mb-6">
+                        <p className="text-sm sm:text-base text-slate-300 mb-6">
                             Dhiman Developers goes beyond building spaces—we create landmarks. With unmatched quality and innovation, we craft environments that inspire, connect, and redefine modern living.
                         </p>
                         <div className="flex space-x-4">
-                            <a href="#" className="text-white hover:text-[#CEA959] transition-colors" aria-label="Facebook">
+                            <a href="#" className="text-white hover:text-[#CEA959]" aria-label="Facebook">
                                 <Facebook size={20} />
                             </a>
-                            <a href="#" className="text-white hover:text-[#CEA959] transition-colors" aria-label="Instagram">
+                            <a href="#" className="text-white hover:text-[#CEA959]" aria-label="Instagram">
                                 <Instagram size={20} />
                             </a>
-                            <a href="#" className="text-white hover:text-[#CEA959] transition-colors" aria-label="LinkedIn">
+                            <a href="#" className="text-white hover:text-[#CEA959]" aria-label="LinkedIn">
                                 <Linkedin size={20} />
                             </a>
                         </div>
@@ -59,15 +59,15 @@ const Footer = ({ isTransparent = false }) => {
                         <h3 className="text-lg font-semibold mb-6 relative pb-2 before:content-[''] before:absolute before:bottom-0 before:left-0 before:h-0.5 before:w-12 before:bg-[#CEA959]">
                             Company
                         </h3>
-                        <ul className="space-y-3">
+                        <ul className="space-y-3 text-sm sm:text-base">
                             {quickLinks.map(({ label, path }, index) => (
                                 <li key={index}>
                                     <Link
                                         to={path}
-                                        className="text-slate-300 hover:text-[#CEA959] transition-colors flex items-center gap-1"
+                                        className="text-slate-300 hover:text-[#CEA959] transition-colors flex items-center gap-2"
                                     >
                                         <ArrowRight size={14} />
-                                        <span>{label}</span>
+                                        {label}
                                     </Link>
                                 </li>
                             ))}
@@ -79,12 +79,12 @@ const Footer = ({ isTransparent = false }) => {
                         <h3 className="text-lg font-semibold mb-6 relative pb-2 before:content-[''] before:absolute before:bottom-0 before:left-0 before:h-0.5 before:w-12 before:bg-[#CEA959]">
                             Quick Links
                         </h3>
-                        <ul className="space-y-3">
+                        <ul className="space-y-3 text-sm sm:text-base">
                             {['Privacy Policy', 'Terms & Condition'].map((item, index) => (
                                 <li key={index}>
-                                    <a href="#" className="text-slate-300 hover:text-[#CEA959] transition-colors flex items-center gap-1">
+                                    <a href="#" className="text-slate-300 hover:text-[#CEA959] transition-colors flex items-center gap-2">
                                         <ArrowRight size={14} />
-                                        <span>{item}</span>
+                                        {item}
                                     </a>
                                 </li>
                             ))}
@@ -96,7 +96,7 @@ const Footer = ({ isTransparent = false }) => {
                         <h3 className="text-lg font-semibold mb-6 relative pb-2 before:content-[''] before:absolute before:bottom-0 before:left-0 before:h-0.5 before:w-12 before:bg-[#CEA959]">
                             Contact Us
                         </h3>
-                        <ul className="space-y-4">
+                        <ul className="space-y-4 text-sm sm:text-base">
                             <li className="flex items-start gap-3">
                                 <MapPin size={20} className="text-[#CEA959] mt-1 flex-shrink-0" />
                                 <span className="text-slate-300">
@@ -104,13 +104,13 @@ const Footer = ({ isTransparent = false }) => {
                                 </span>
                             </li>
                             <li className="flex items-center gap-3">
-                                <Phone size={20} className="text-[#CEA959] flex-shrink-0" />
+                                <Phone size={20} className="text-[#CEA959]" />
                                 <a href="tel:+91999457050" className="text-slate-300 hover:text-[#CEA959] transition-colors">
                                     +91 99994 57050
                                 </a>
                             </li>
-                            <li className="flex items-center gap-2">
-                                <Mail size={20} className="text-[#CEA959] flex-shrink-0" />
+                            <li className="flex items-center gap-3">
+                                <Mail size={20} className="text-[#CEA959]" />
                                 <a href="mailto:akshay@dhimandevelopers.com" className="text-slate-300 hover:text-[#CEA959] transition-colors">
                                     akshay@dhimandevelopers.com
                                 </a>
@@ -120,14 +120,14 @@ const Footer = ({ isTransparent = false }) => {
                 </div>
 
                 {/* Bottom Bar */}
-                <div className="pt-10 mt-10 border-t border-slate-800 text-center text-slate-400 w-full">
+                <div className="pt-10 mt-10 border-t border-slate-800 text-center text-sm text-slate-400">
                     <a
                         href="https://thedmsolutions.in/"
                         target="_blank"
                         rel="noopener noreferrer"
                         className="hover:text-[#CEA959] transition-colors"
                     >
-                        Designed By The Digital Marketing Solutions
+                        Designed By The Digital Marketing Solutions © {currentYear}
                     </a>
                 </div>
             </div>

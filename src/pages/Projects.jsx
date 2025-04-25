@@ -23,13 +23,13 @@ const Projects = () => {
 
     return (
         <div className="flex flex-col min-h-screen bg-white mt-8">
-            <div className="pt-15 px-6 lg:px-24 flex-grow">
-                <h2 className="text-5xl font-serif text-[#1F2F3C] mb-12 text-center tracking-wide uppercase">
+            <div className="pt-20 px-4 sm:px-6 lg:px-24 flex-grow">
+                <h2 className="text-4xl sm:text-5xl font-serif text-[#1F2F3C] mb-12 text-center tracking-wide uppercase">
                     Our Projects
                 </h2>
 
                 {/* Banner section */}
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16">
+                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 mb-16">
                     {projectImages.map((img, index) => {
                         const words = img.label.split(" ");
                         return (
@@ -41,12 +41,12 @@ const Projects = () => {
                                 <img
                                     src={img.src}
                                     alt={img.alt}
-                                    className="w-full h-72 object-cover transform transition-transform duration-500 group-hover:scale-105"
+                                    className="w-full h-64 sm:h-72 object-cover transform transition-transform duration-500 group-hover:scale-105"
                                 />
 
                                 {/* Overlay with top-aligned text */}
-                                <div className="absolute inset-0  flex items-start justify-center pt-4 px-2 pointer-events-none">
-                                    <h3 className="text-white text-xl lg:text-2xl font-serif uppercase tracking-wider text-center  px-3 py-1 rounded">
+                                <div className="absolute inset-0 flex items-start justify-center pt-4 px-2 pointer-events-none">
+                                    <h3 className="text-white text-lg sm:text-xl lg:text-2xl font-serif uppercase tracking-wider text-center px-3 py-1 rounded">
                                         <span className="text-[#E3D07E]">{words[0]}</span>{" "}
                                         <span>{words.slice(1).join(" ")}</span>
                                     </h3>
@@ -57,7 +57,7 @@ const Projects = () => {
                 </div>
 
                 {/* Description section */}
-                <div className="text-center text-[#4A4A4A] max-w-3xl mx-auto mb-20 text-lg leading-relaxed">
+                <div className="text-center text-[#4A4A4A] max-w-3xl mx-auto mb-20 text-base sm:text-lg leading-relaxed px-4">
                     <p className="mb-4">
                         At <span className="text-[#BB9880] font-medium">Dhiman Developers</span>, our projects embody the perfect balance of luxury, innovation, and sustainability. We shape spaces that not only meet modern demands but also anticipate the needs of tomorrow.
                     </p>

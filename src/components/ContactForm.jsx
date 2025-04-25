@@ -1,10 +1,8 @@
-
 import { motion } from 'framer-motion';
 import { Send } from 'lucide-react';
 import { useState } from 'react';
 
-
-const ContactForm= () => {
+const ContactForm = () => {
     const [formData, setFormData] = useState({
         name: '',
         email: '',
@@ -13,10 +11,10 @@ const ContactForm= () => {
         message: ''
     });
 
-    const [errors, setErrors] = useState ({});
+    const [errors, setErrors] = useState({});
     const [isSubmitted, setIsSubmitted] = useState(false);
 
-    const handleChange   = ()=> {
+    const handleChange = (e) => {
         const { name, value } = e.target;
         setFormData(prev => ({ ...prev, [name]: value }));
         if (errors[name]) {
@@ -37,8 +35,8 @@ const ContactForm= () => {
         return Object.keys(newErrors).length === 0;
     };
 
-    const inputClasses = "w-full px-4 py-3 border border-slate-300 rounded-md focus:outline-none focus:ring-2 focus:ring-amber-500 focus:border-transparent transition-all";
-    const labelClasses = "block text-slate-700 font-medium mb-2";
+    const inputClasses = "w-full px-4 py-3 border border-slate-300 rounded-md focus:outline-none focus:ring-2 focus:ring-amber-500 focus:border-transparent transition-all text-sm sm:text-base";
+    const labelClasses = "block text-slate-700 font-medium mb-2 text-sm sm:text-base";
     const errorClasses = "text-red-500 text-sm mt-1";
 
     return (
@@ -47,10 +45,10 @@ const ContactForm= () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5 }}
-            className="bg-white p-8 rounded-lg shadow-lg"
+            className="bg-white p-6 sm:p-8 md:p-10 rounded-lg shadow-lg w-full max-w-5xl mx-auto"
         >
             {isSubmitted ? (
-                <div className="text-center py-8">
+                <div className="text-center py-12">
                     <div className="w-16 h-16 bg-green-100 text-green-600 rounded-full flex items-center justify-center mx-auto mb-4">
                         <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
@@ -65,9 +63,9 @@ const ContactForm= () => {
                     method="POST"
                     onSubmit={(e) => {
                         if (!validate()) {
-                            e.preventDefault(); // Stop if validation fails
+                            e.preventDefault();
                         } else {
-                            setIsSubmitted(true); // Temporarily set, Formspree will handle submission
+                            setIsSubmitted(true);
                         }
                     }}
                 >
