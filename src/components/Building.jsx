@@ -38,7 +38,7 @@ const Building = () => {
             <motion.img
                 src="https://dhiman.thedmsolutions.in/wp-content/uploads/2025/03/freepik__adjust__31526.png"
                 alt="Building Centered"
-                className="relative z-10 mt-10 w-auto max-w-[160px] md:max-w-[200px] lg:max-w-[260px] object-contain pt-80"
+                className="relative z-10 mt-20 w-auto max-w-[160px] md:max-w-[200px] lg:max-w-[260px] object-contain"
                 style={{ scale, y: translateY }}
             />
         </motion.div>
