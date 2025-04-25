@@ -14,7 +14,7 @@ const SectionTitle = ({
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 0.5 }}
-        className={`text-3xl md:text-4xl font-bold mb-4 ${light ? 'text-white' : 'text-slate-900'}`}
+        className={`text-3xl md:text-4xl font-serif mb-4 ${light ? 'text-white' : 'text-slate-900'}`}
       >
         {title}
       </motion.h2>

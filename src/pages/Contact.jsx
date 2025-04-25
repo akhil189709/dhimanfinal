@@ -55,7 +55,7 @@ const Contact = () => {
                         {[
                             {
                                 title: <p className='font-serif font-normal'>Talk to Us</p>,
-                                desc: <p className='text-lg text-black mb-2'>We’re just a call away, always ready to help you.</p>,
+                                desc: 'We’re just a call away, always ready to help you',
                                 icon: <Phone className="text-black" size={24} />,
                                 content: <span className="text-base">+91 99994 57050</span>
                             },
@@ -68,7 +68,7 @@ const Contact = () => {
                             {
                                 title: <p className='font-serif font-medium'>Visit Us</p>,
                                 desc: 'Come say hello at our office or find us on the map.',
-                                icon: <MapPin className="text-black" size={24} />,
+                                icon: <MapPin className="text-black mt-3" size={24} />,
                                 content: (
                                     <span className="text-base">
                                         505, 5th Floor, Emaar The Palm Square<br />
@@ -148,7 +148,7 @@ const Contact = () => {
             <section className="py-20 bg-white">
                 <div className="container mx-auto px-4">
                     <SectionTitle
-                        className="font-sans"
+                        className="font-serif"
                         title="Our Location"
                         subtitle="Visit our office to discuss your project in person."
                         center

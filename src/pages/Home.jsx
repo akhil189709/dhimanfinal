@@ -9,8 +9,11 @@ import Footer from "../components/Footer";
 const Home = () => {
     return (
         <div className="relative w-screen overflow-hidden">
-            {/* Navbar */}
+            <div className="fixed top-0 left-0 w-full z-50 bg-white/10 backdrop-blur-md shadow-md">
+                {/* ...rest of navbar content */}
             <Navbar />
+            </div>
+            {/* Navbar */}
 
             {/* Background Video Hero Section */}
             <div className="fixed top-0 left-0 w-full h-screen z-0">
@@ -29,7 +32,7 @@ const Home = () => {
                 </video>
 
                 {/* Overlay */}
-                <div className="absolute top-0 left-0 w-full h-full bg-black/40 z-10" />
+                <div className="absolute top-0 left-0 w-full h-full bg-black/10 z-10" />
 
                 {/* Optional Hero Content */}
                 <div className="relative z-20 flex items-center justify-center h-full text-white text-4xl font-bold">
@@ -48,6 +51,7 @@ const Home = () => {
             <Villa />
 
             {/* Footer */}
+            {/* Footer */}
             <div className="relative w-full h-[60vh] pt-8 pb-6 overflow-hidden">
                 <video
                     autoPlay
@@ -63,7 +67,13 @@ const Home = () => {
                     Your browser does not support the video tag.
                 </video>
 
-                <div className="relative z-10 w-full h-full flex items-center justify-center">
+                {/* Gradient overlay from transparent/blur to #1F2F3C */}
+                {/* Gradient overlay from solid #1F2F3C to transparent blur */}
+                <div className="absolute top-0 left-0 w-full h-full z-10 bg-gradient-to-t from-[#F4E3D7]/30 via-[#1F2F3C]/60 to-[#1F2F3C]" />
+
+
+
+                <div className="relative z-20 w-full h-full flex items-center justify-center">
                     <Footer isTransparent={true} />
                 </div>
             </div>

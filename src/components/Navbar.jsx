@@ -17,17 +17,17 @@ const Navbar = () => {
                     <img
                         src="https://dhiman.thedmsolutions.in/wp-content/uploads/2025/03/Dhiman-Final-Logo-2048x714.png"
                         alt="Logo"
-                        className="h-16 object-contain"
+                        className="h-12 object-contain"
                     />
                 </Link>
 
                 {/* Desktop Menu */}
-                <div className="hidden md:flex items-center space-x-8">
+                <div className="hidden md:flex items-center space-x-4">
                     {navLinks.map(({ to, label }) => (
                         <Link
                             key={label}
                             to={to}
-                            className="text-white text-[20px] font-serif px-4 py-2 hover:text-[#BB9880] transition-colors duration-300 flex items-center gap-1"
+                            className="text-white text-[16px] font-serif px-4 py-2 hover:text-[#BB9880] transition-colors duration-300 flex items-center"
                         >
                             {label}
                         </Link>
