@@ -15,7 +15,7 @@ const Contact = () => {
             <section className="relative min-h-screen w-full flex items-center justify-center overflow-hidden">
                 <div className="absolute inset-0 z-0 ">
                     <img
-                        src="src/pages/interior-designer-presenting-renovation-project.jpg"
+                        src="/interior-designer-presenting-renovation-project.jpg"
                         alt="Office interior"
                         className="w-full h-full object-cover"
                     />
