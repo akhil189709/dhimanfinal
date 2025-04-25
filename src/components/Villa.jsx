@@ -15,7 +15,7 @@ const Villa = () => {
                     <h2 className="text-xl sm:text-2xl md:text-4xl font-serif text-[#F4E3D7]">
                         REDEFINING LUXURY LIVING
                     </h2>
-                    <p className="text-xs sm:text-sm md:text-base font-serif text-[#F4E3D7]">
+                    <p className="text-xs sm:text-sm md:text-base font-serif mb-10 text-[#F4E3D7]">
                         Dhiman Developers goes beyond building spaces—we create landmarks.
                         With unmatched quality and innovation, we craft environments that inspire, connect, and redefine modern living.
                     </p>
