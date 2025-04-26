@@ -3,5 +3,5 @@
 
 
 html, body {
-  cursor: url('/cursor.cur'), auto;
+  cursor: url('/cursor.cur') 16 16, auto;
 }

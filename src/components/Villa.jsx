@@ -15,10 +15,20 @@ const Villa = () => {
                     <h2 className="text-xl sm:text-2xl md:text-4xl font-serif text-[#F4E3D7]">
                         REDEFINING LUXURY LIVING
                     </h2>
-                    <p className="text-xs sm:text-sm md:text-base font-serif mb-10 text-[#F4E3D7]">
-                        Dhiman Developers goes beyond building spaces—we create landmarks.
-                        With unmatched quality and innovation, we craft environments that inspire, connect, and redefine modern living.
-                    </p>
+                    <div className="mb-10">
+                        <div className="mb-10">
+                            <p className="text-xs sm:text-sm md:text-base font-serif text-[#F4E3D7] leading-snug">
+                                Dhiman Developers goes beyond building spaces — we create landmarks.
+                            </p>
+                            <p className="text-xs sm:text-sm md:text-base font-serif text-[#F4E3D7] leading-snug whitespace-nowrap -ml-24 pr-5">
+                                With unmatched quality and innovation we craft environments that inspire, connect, and redefine modern living.
+                            </p>
+                        </div>
+
+                    </div>
+
+
+
                 </div>
             </div>
         </div>
