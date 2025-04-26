@@ -8,10 +8,12 @@ import Contact from "./pages/Contact";
 import NotFound from "./pages/NotFound";
 import './index.css';
 import ScrollToTop from "./components/ScrollToTop";
+import CustomCursor from "./components/CustomCursor";
 
 export default function App() {
   return (
     <Router>
+      <CustomCursor/>
       <ScrollToTop/>
       <Navbar />
       <main className="container mx-auto">

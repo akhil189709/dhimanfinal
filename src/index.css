@@ -2,6 +2,6 @@
 
 
 
-html, body {
-  cursor: url('/cursor.cur') 16 16, auto;
+body {
+  cursor: none
 }
